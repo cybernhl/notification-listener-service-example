@@ -1,6 +1,7 @@
 buildscript {
     ext {
-        agp_gradle = '8.2.1'
+        agp_gradle = libs.versions.agp.version.get()
+        kotlin_version =libs.versions.kotlin.version.get()
     }
     repositories {
         maven {
@@ -12,6 +13,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_gradle"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
